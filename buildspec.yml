@@ -1,6 +1,18 @@
 # Do not change version. This is the version of aws buildspec, not the version of your buldspec file.
 version: 0.2
 
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - ls
+
+artifacts:
+  files:
+    - public/*
+
+
 phases:
   install:
     runtime-versions:
@@ -32,3 +44,4 @@ artifacts:
     - package.json
     - node_modules/async/*
     - node_modules/lodash/*
+    - buildspec.yml
